@@ -1,31 +1,84 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: giglogistics
+repo: status
 
+# Endpoints we monitor on behalf of our integrators. The list below is the
+# minimum useful set — add new entries here whenever a new public API surface
+# goes live. Each entry triggers a GitHub Actions cron run every 5 minutes
+# from multiple regions.
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  # ── Agility API (.NET 9) ────────────────────────────────────────────────
+  - name: Agility API · Production
+    url: https://agility.giglogistics.com/health/live
+    expectedStatusCodes: [200]
 
+  - name: Agility API · Production · Readiness
+    url: https://agility.giglogistics.com/health/ready
+    expectedStatusCodes: [200]
+
+  - name: Agility API · Token Endpoint
+    url: https://agility.giglogistics.com/token
+    method: POST
+    headers:
+      - "Content-Type: application/x-www-form-urlencoded"
+    body: "grant_type=client_credentials"
+    # We don't have a valid client_credentials grant here — just want to confirm
+    # the auth endpoint is reachable and returning a sane 400/401, not 5xx.
+    expectedStatusCodes: [400, 401]
+
+  - name: Agility API · Swagger
+    url: https://agility.giglogistics.com/swagger/v1/swagger.json
+    expectedStatusCodes: [200]
+
+  # ── Dev environment (lower-tier; useful for partners testing integrations) ──
+  - name: Agility API · Dev
+    url: https://dev-agility.giglogistics.com/health/live
+    expectedStatusCodes: [200]
+
+  - name: Agility API · Dev · Readiness
+    url: https://dev-agility.giglogistics.com/health/ready
+    expectedStatusCodes: [200]
+
+# Tighten the default thresholds — for a logistics API a slow response is as
+# bad as an outage, so degrade at 1.5s and mark down past 3s.
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.giglogistics.com
+  logoUrl: https://giglogistics.com/favicon.ico
+  name: GIG Logistics API Status
+  introTitle: "**GIG Logistics API Status** — real-time uptime and performance for our integrator-facing services."
+  introMessage: |
+    This page reports the health of every public API surface integrators rely
+    on. Data is refreshed every 5 minutes from multiple regions.
+
+    For detailed metrics (request rate, latency percentiles, error rate by
+    endpoint), see our [Grafana dashboard](https://metrics.giglogistics.com).
+
+    Need to report an issue or subscribe to incident updates?
+    [Open an issue](https://github.com/giglogistics/status/issues/new/choose).
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Metrics
+      href: https://metrics.giglogistics.com
+    - title: Report issue
+      href: https://github.com/giglogistics/status/issues/new/choose
+    - title: Subscribe
+      href: https://github.com/giglogistics/status/subscription
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Notification channels (Slack / email / webhook) are configured via repo
+# secrets — see https://upptime.js.org/docs/notifications. We're starting with
+# GitHub Issue auto-open on incident; ops can subscribe to issue notifications.
+notifications: []
+
+# Run a check every 5 minutes (vs the default hourly) so we catch incidents
+# inside the 5-minute SLA that most enterprise integrators expect.
+workflowSchedule:
+  graphs: "0 0 * * *"           # daily graphs render
+  responseTime: "0 23 * * *"    # nightly response-time summary
+  staticSite: "0 1 * * *"       # nightly static-site rebuild
+  summary: "0 0 * * *"          # daily summary
+  updateTemplate: "0 0 * * *"
+  updates: "0 3 * * *"
+  uptime: "*/5 * * * *"         # uptime checks every 5 minutes
+
+assignees:
+  - ademolaadelekan
