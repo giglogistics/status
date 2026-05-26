@@ -50,7 +50,7 @@ status-website:
     on. Data is refreshed every 5 minutes from multiple regions.
 
     For detailed metrics (request rate, latency percentiles, error rate by
-    endpoint), see our [Grafana dashboard](https://metrics.giglogistics.com).
+    endpoint), see our [live Grafana dashboard](https://monitoring.giglogistics.com/public-dashboards/05da3fe1595b46569eaba959c9d6ef90).
 
     Need to report an issue or subscribe to incident updates?
     [Open an issue](https://github.com/giglogistics/status/issues/new/choose).
@@ -58,7 +58,7 @@ status-website:
     - title: Status
       href: /
     - title: Metrics
-      href: https://metrics.giglogistics.com
+      href: https://monitoring.giglogistics.com/public-dashboards/05da3fe1595b46569eaba959c9d6ef90
     - title: Report issue
       href: https://github.com/giglogistics/status/issues/new/choose
     - title: Subscribe
