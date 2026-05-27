@@ -4,36 +4,40 @@
     "url": "https://agility.giglogistics.com/health/live",
     "icon": "https://icons.duckduckgo.com/ip3/agility.giglogistics.com.ico",
     "slug": "agility-api-production",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "98.73%",
+    "uptimeDay": "98.73%",
+    "uptimeWeek": "98.73%",
+    "uptimeMonth": "98.73%",
+    "uptimeYear": "98.73%",
     "time": 470,
     "timeDay": 470,
     "timeWeek": 470,
     "timeMonth": 470,
     "timeYear": 470,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-05-27": 17
+    }
   },
   {
     "name": "Agility API · Production · Readiness",
     "url": "https://agility.giglogistics.com/health/ready",
     "icon": "https://icons.duckduckgo.com/ip3/agility.giglogistics.com.ico",
     "slug": "agility-api-production-readiness",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "99.43%",
+    "uptimeDay": "99.43%",
+    "uptimeWeek": "99.43%",
+    "uptimeMonth": "99.43%",
+    "uptimeYear": "99.43%",
     "time": 414,
     "timeDay": 414,
     "timeWeek": 414,
     "timeMonth": 414,
     "timeYear": 414,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-05-27": 8
+    }
   },
   {
     "name": "Agility API · Token Endpoint",
