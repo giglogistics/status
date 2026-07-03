@@ -1,7 +1,7 @@
 url: https://agility.giglogistics.com/health/ready
-status: down
-code: 503
-responseTime: 112
-lastUpdated: 2026-07-03T21:05:01.693Z
+status: up
+code: 200
+responseTime: 427
+lastUpdated: 2026-07-03T21:33:49.552Z
 startTime: 2026-05-26T19:59:06.704Z
 generator: Upptime <https://github.com/upptime/upptime>
