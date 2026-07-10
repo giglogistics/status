@@ -1,7 +1,7 @@
 url: https://agility.giglogistics.com/swagger/v1/swagger.json
-status: down
-code: 503
-responseTime: 349
-lastUpdated: 2026-07-10T22:37:42.245Z
+status: up
+code: 200
+responseTime: 3525
+lastUpdated: 2026-07-10T23:01:24.184Z
 startTime: 2026-05-26T19:59:07.829Z
 generator: Upptime <https://github.com/upptime/upptime>
