@@ -1,7 +1,7 @@
 url: https://agility.giglogistics.com/health/live
-status: up
-code: 200
-responseTime: 485
-lastUpdated: 2026-08-03T23:22:10.766Z
+status: down
+code: 503
+responseTime: 380
+lastUpdated: 2026-08-04T21:02:43.990Z
 startTime: 2026-05-26T19:59:06.059Z
 generator: Upptime <https://github.com/upptime/upptime>
