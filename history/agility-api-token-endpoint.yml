@@ -1,7 +1,7 @@
 url: https://agility.giglogistics.com/token
-status: down
-code: 503
-responseTime: 348
-lastUpdated: 2026-08-14T20:37:28.414Z
+status: up
+code: 400
+responseTime: 364
+lastUpdated: 2026-08-14T21:21:54.218Z
 startTime: 2026-05-26T19:59:07.228Z
 generator: Upptime <https://github.com/upptime/upptime>
