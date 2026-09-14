@@ -13,7 +13,7 @@
     "time": 477,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 518,
+    "timeMonth": 524,
     "timeYear": 477,
     "dailyMinutesDown": {
       "2026-05-27": 42,
@@ -36,7 +36,7 @@
     "time": 438,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 487,
+    "timeMonth": 496,
     "timeYear": 438,
     "dailyMinutesDown": {
       "2026-05-27": 32,
@@ -51,15 +51,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/agility.giglogistics.com.ico",
     "slug": "agility-api-token-endpoint",
     "status": "up",
-    "uptime": "99.89%",
+    "uptime": "99.90%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.62%",
-    "uptimeYear": "99.89%",
+    "uptimeYear": "99.90%",
     "time": 374,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 383,
+    "timeMonth": 386,
     "timeYear": 374,
     "dailyMinutesDown": {
       "2026-08-14": 44,
@@ -80,7 +80,7 @@
     "time": 2028,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 2251,
+    "timeMonth": 2311,
     "timeYear": 2028,
     "dailyMinutesDown": {
       "2026-07-10": 24,
@@ -103,7 +103,7 @@
     "time": 477,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 569,
+    "timeMonth": 580,
     "timeYear": 477,
     "dailyMinutesDown": {
       "2026-08-25": 120
@@ -123,7 +123,7 @@
     "time": 387,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 465,
+    "timeMonth": 471,
     "timeYear": 387,
     "dailyMinutesDown": {
       "2026-08-25": 120
